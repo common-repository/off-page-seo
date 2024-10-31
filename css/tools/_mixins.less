@@ -1,0 +1,107 @@
+.Slide1Animation(){
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -ms-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
+    -webkit-transition-delay: 2s; /* Safari */
+    transition-delay: 2s;
+}
+.Transform(@param){
+    -ms-transform: @param; /* IE 9 */
+    -moz-transform: @param; /* Chrome, Safari, Opera */
+    -webkit-transform: @param; /* Chrome, Safari, Opera */
+    transform: @param;
+}
+.Rotate(@deg){
+    -ms-transform: rotate(@deg); /* IE 9 */
+    -webkit-transform: rotate(@deg); /* Chrome, Safari, Opera */
+    transform: rotate(@deg);
+}
+.Transition (@transition: all ease 0.5s) {
+    -webkit-transition: @transition;
+    -moz-transition:    @transition;
+    -ms-transition:     @transition;
+    -o-transition:      @transition;
+}
+.TranslateY(@translate: -50%){
+    -ms-transform: translateY(@translate);
+    -webkit-transform: translateY(@translate);
+    -o-transform: translateY(@translate);
+    transform: translateY(@translate);
+}
+.TranslateX(@translate: -50%){
+    -ms-transform: translateX(@translate);
+    -webkit-transform: translateX(@translate);
+    -o-transform: translateX(@translate);
+    transform: translateX(@translate);
+}
+
+.TranslateXY(@translateX: -50%, @translateY: -50%){
+    -ms-transform: translate(@translateX, @translateY);
+    -webkit-transform: translate(@translateX, @translateY);
+    -o-transform: translate(@translateX, @translateY);
+    transform: translate(@translateX, @translateY);
+}
+.Gradient (@startColor: #eee, @endColor: white) {
+    background-color: @startColor;
+    background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+    background: -webkit-linear-gradient(top, @startColor, @endColor);
+    background: -moz-linear-gradient(top, @startColor, @endColor);
+    background: -ms-linear-gradient(top, @startColor, @endColor);
+    background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+.Shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+    -webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+    -moz-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+    box-shadow:		@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.BorderRadius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius:    @radius;
+    border-radius:         @radius;
+
+    -moz-background-clip:    padding;
+    -webkit-background-clip: padding-box;
+    background-clip:         padding-box;
+}
+
+.Opacity (@opacity: 0.5) {
+    -webkit-opacity: 	@opacity;
+    -moz-opacity: 		@opacity;
+    opacity: 		@opacity;
+}
+
+.BorderRadiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+    -webkit-border-top-right-radius:    @topright;
+    -webkit-border-bottom-right-radius: @bottomright;
+    -webkit-border-bottom-left-radius:  @bottomleft;
+    -webkit-border-top-left-radius:     @topleft;
+
+    -moz-border-radius-topright:        @topright;
+    -moz-border-radius-bottomright:     @bottomright;
+    -moz-border-radius-bottomleft:      @bottomleft;
+    -moz-border-radius-topleft:         @topleft;
+
+    border-top-right-radius:            @topright;
+    border-bottom-right-radius:         @bottomright;
+    border-bottom-left-radius:          @bottomleft;
+    border-top-left-radius:             @topleft;
+
+    -moz-background-clip:    padding;
+    -webkit-background-clip: padding-box;
+    background-clip:         padding-box;
+}
+
+.TextShadow (@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
+    text-shadow: @string;
+}
+
+.Animation (@param) {
+    -webkit-animation: @param;
+    -moz-animation: @param;
+    -ms-animation: @param;
+    animation: @param;
+}
